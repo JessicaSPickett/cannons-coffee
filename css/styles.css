@@ -1,0 +1,204 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --catalina: #06327d;
+  --bluetiful: #2b70e4;
+  --vegan: #209d5c;
+  --sunglow: #ffd034;
+  --lightblue: #cadbf8;
+  --darkblue: #063270;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--black);
+  background-color: var(--darkblue);
+  font-family: Poppins;
+  font-size: 1.125rem;
+}
+
+header {
+  text-transform: uppercase;
+  font-weight: normal;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+main {
+  border-top: 5px solid var(--sunglow);
+  border-bottom: 5px solid var(--sunglow);
+  background-color: var(--white);
+  text-align: left;
+}
+
+.container {
+  font-family: Poppins;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.two img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+footer {
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: normal;
+  text-align: center;
+  gap: 1rem;
+  margin: 2rem;
+}
+h1 {
+  font-weight: normal;
+  font-size: 3rem;
+  margin: 0;
+}
+
+h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+h3 {
+  font-weight: normal;
+  font-size: 1.75rem;
+}
+nav {
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+  font-family: Poppins;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--white);
+  display: block;
+  margin: 0.5rem;
+}
+
+.green-button {
+  display: inline-block;
+  border-radius: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: var(--vegan);
+  color: var(--white);
+  padding: 0.5rem;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--catalina);
+  color: var(--white);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+@media (min-width: 800px) {
+  nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+  }
+
+  nav ul {
+    margin: 0;
+    padding-top: 2.7rem;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.one {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+.douce {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  background: var(--white);
+}
+
+.douce h2 {
+  grid-column: 1/3;
+  padding-left: 2rem;
+  font-weight: normal;
+}
+
+.douce img {
+  grid-column: 2/2;
+  max-width: 100%;
+  grid-row: 1/4;
+  padding: 1rem;
+}
+
+.douce p {
+  grid-column: 1/3;
+  padding-left: 1rem;
+  margin: 0;
+  /*     padding: 0; */
+}
+
+.two {
+  background-color: var(--lightblue);
+  display: grid;
+  padding: 2rem;
+}
+
+@media (min-width: 650px) {
+  .two {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .two {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
