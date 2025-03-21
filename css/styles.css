@@ -198,22 +198,11 @@ nav a {
 }
 
 @media (min-width: 650px) {
-  nav {
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-end;
-  }
-  nav ul {
-    margin: o;
-    padding-top: 2.7rem;
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
-
-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .two {
   grid-template-columns: 1fr 1fr;
 
