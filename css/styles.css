@@ -85,8 +85,8 @@ h2 {
   text-align: left;
   align-items: center;
   background-color: var(--white);
-  border-bottom: 5px solid var(--sunglow);
-  border-top: 5px solid var(--sunglow);
+  /* border-bottom: 5px solid var(--sunglow);
+  border-top: 5px solid var(--sunglow); */
 }
 .parent {
   display: grid;
