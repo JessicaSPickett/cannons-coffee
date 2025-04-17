@@ -1,20 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JessicaSPickett Cannons Latte</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jessica S. Pickett Cannons Coffee</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<body>
-  <div class="container">
-    <header>
-      <h2> Contact Cannons Coffee</h2>
-      <p>Coming Soon!</p>
-    </footer>
-  </div>
-</body>
+  <body>
+    <div class="container">
+      <header>
+        <div class="two">
+          <a>
+            <img
+              src="images/logo-nav.webp"
+              alt="Cannons Coffee, Beans of Joy! Est. 2014"
+            />
+          </a>
+          <h1>Cannons Coffee</h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html" target="_blank">HOME</a>
+            </li>
+            <li>
+              <a href="latte.html" target="_blank">COFFEE</a>
+            </li>
+            <li>
+              <a href="https://www.starbucks.com/" target="_blank">ABOUT</a>
+            </li>
+            <li>
+              <a href="contact.html" target="_blank">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- FORM  -->
+      <main>
+        <form id="contactForm">
+          <h2>Contact Us</h2>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" /><br />
+
+          <label for="comments">Comments:</label>
+          <textarea id="comments" name="comments"></textarea><br />
+
+          <label for="flavor">Favorite Coffee Flavor:</label>
+          <select id="flavor" name="flavor" required>
+            <option value="vanilla">Vanilla</option>
+            <option value="hazelnut">Hazelnut</option>
+            <option value="caramel">Caramel</option></select
+          ><br />
+
+          <h2>Are you:</h2>
+          <div class="radio-group">
+            <label for="buying">
+              <input type="radio" id="buying" name="interest" value="buying" />
+              Buying Coffee
+            </label>
+            <label for="employment">
+              <input
+                type="radio"
+                id="employment"
+                name="interest"
+                value="employment"
+              />
+              Seeking Employment
+            </label>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+        <div id="thankYouMessage" style="display: none"></div>
+      </main>
+
+      <footer>
+        <img
+          src="images/logo-footer (1).webp"
+          alt=" Cannons Coffee, Beans of Joy! Est. 2014"
+        />
+        <p>&copy; 2025 Cannons Coffee.All Rights Reserved.</p>
+      </footer>
+    </div>
+    <script src="js/custom.js"></script>
+  </body>
 </html>

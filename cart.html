@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cannons Coffee - Login</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+  <div class="container">
+    <header>
+      <div class="two">
+        <a>
+          <img
+            src="images/logo-nav.webp"
+            alt="Cannons Coffee, Beans of Joy! Est. 2014"
+          />
+        </a>
+        <h1>Cannons Coffee</h1>
+      </div>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" target="_blank">HOME</a>
+          </li>
+          <li>
+            <a href="latte.html" target="_blank">COFFEE</a>
+          </li>
+          <li>
+            <a href="https://www.starbucks.com/" target="_blank">ABOUT</a>
+          </li>
+          <li>
+            <a href="contact.html" target="_blank">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+
+    <!-- Main Content -->
+    <main>
+      <form id="loginForm">
+        <h2>Login</h2>
+        <label for="loginName">Name:</label>
+        <input type="text" id="loginName" name="loginName" required /><br />
+
+        <label for="loginEmail">Email:</label>
+        <input type="email" id="loginEmail" name="loginEmail" required /><br />
+
+        <label for="loginPassword">Password:</label>
+        <input
+          type="password"
+          id="loginPassword"
+          name="loginPassword"
+          required
+        /><br />
+
+        <button type="submit">Login</button>
+      </form>
+      <div id="welcomeMessage" style="display: none"></div>
+    </main>
+
+   
+    <footer>
+      <img
+        src="images/logo-footer (1).webp"
+        alt="Cannons Coffee, Beans of Joy! Est. 2014"
+      />
+      <p>&copy; 2025 Cannons Coffee. All rights reserved.</p>
+    </footer>
+  </body>
+  <script src="js/custom.js" defer></script>
+</html>

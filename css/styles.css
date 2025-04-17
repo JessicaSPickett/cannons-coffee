@@ -173,3 +173,147 @@ footer {
   text-align: center;
   padding-top: 1rem;
 }
+/*  the styling for the contact.html */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+form label,
+form input,
+form textarea,
+form select,
+form button {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+form input,
+form textarea,
+form select {
+  padding: 0.75rem;
+  border: 1px solid var(--bluetiful);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+form button[type="submit"] {
+  background-color: var(--vegan);
+  color: var(--white);
+  text-transform: uppercase;
+  border-radius: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+form button[type="submit"]:hover {
+  background-color: var(--bluetiful);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.radio-group label {
+  display: flex;
+}
+#thankYouMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: "Poppins", sans-serif;
+  color: var(--black);
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+/* Login Form Styling */
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+#loginForm label,
+#loginForm input,
+#loginForm button {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#loginForm input {
+  padding: 0.75rem;
+  border: 1px solid var(--bluetiful);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+#loginForm button[type="submit"] {
+  background-color: var(--vegan);
+  color: var(--white);
+  text-transform: uppercase;
+  border-radius: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+#loginForm button[type="submit"]:hover {
+  background-color: var(--bluetiful);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+/* Welcome Message Styling */
+#welcomeMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: "Poppins", sans-serif;
+  color: var(--black);
+  font-size: 1.25rem;
+  text-align: center;
+}
