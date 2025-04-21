@@ -1,10 +1,15 @@
 const loginForm = document.getElementById("loginForm");
 const welcomeMessage = document.getElementById("welcomeMessage");
-
+// NOTE TO ME ABOUT IF : This ensures that the loginForm and
+// welcomeMessage elements are not null or undefined.
+// If either of them is missing, the code inside the if
+// block will not execute, preventing runtime errors.
 if (loginForm && welcomeMessage) {
   loginForm.addEventListener("submit", function (e) {
+    console.log("Login form submission started.");
     e.preventDefault();
-
+    // The function (e) is an anonymous function that is
+    // being passed as a callback to the addEventListener method.
     const name = document.getElementById("loginName").value;
 
     console.log("Name captured:", name);
@@ -19,15 +24,17 @@ if (loginForm && welcomeMessage) {
 
     // Hide the form
     loginForm.style.display = "none";
+    console.log("Login form submission completed.");
   });
 }
 
-// Handl contact form
+// Handle contact form
 const contactForm = document.getElementById("contactForm");
 const thankYouMessage = document.getElementById("thankYouMessage");
 
 if (contactForm && thankYouMessage) {
   contactForm.addEventListener("submit", function (e) {
+    console.log("Contact form submission started.");
     e.preventDefault();
 
     const name = document.getElementById("name").value;
@@ -38,7 +45,11 @@ if (contactForm && thankYouMessage) {
     const interest = document.querySelector(
       'input[name="interest"]:checked'
     ).value;
-
+    //     WHY I USED : 'input[name="interest"]:checked'
+    // targets an <input> element with the
+    // name attribute set to interest and that
+    // is currently checked (selected).
+    // typically used for radio buttons or checkboxes.
     console.log("Name captured:", name);
     console.log("Email captured:", email);
     console.log("Phone captured:", phone);
@@ -60,5 +71,6 @@ if (contactForm && thankYouMessage) {
 
     // Hide the form
     contactForm.style.display = "none";
+    console.log("Contact form submission completed.");
   });
 }
