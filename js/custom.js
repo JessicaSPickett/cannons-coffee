@@ -1,61 +1,64 @@
-// Ensure the DOM is fully loaded before adding event listeners
-document.addEventListener("DOMContentLoaded", function () {
-  // Contact Form Logic
-  const contactForm = document.getElementById("contactForm");
-  const thankYouMessage = document.getElementById("thankYouMessage");
+const loginForm = document.getElementById("loginForm");
+const welcomeMessage = document.getElementById("welcomeMessage");
 
-  if (contactForm && thankYouMessage) {
-    contactForm.addEventListener("submit", function onSubmit(e) {
-      e.preventDefault();
-      const formData = new FormData(contactForm);
-      const dataObject = Object.fromEntries(formData.entries());
+if (loginForm && welcomeMessage) {
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-      console.log("Form data collected:", dataObject);
+    const name = document.getElementById("loginName").value;
 
-      const name = dataObject.name || "Guest";
-      const email = dataObject.email || "No email provided";
-      const phone = dataObject.phone || "No phone provided";
-      const comments = dataObject.comments || "No comments provided";
-      const flavor = dataObject.flavor || "No flavor selected";
-      const interest = dataObject.interest || "No interest selected";
+    console.log("Name captured:", name);
 
-      const thankYouText = `
-        Thank you, ${name}! We appreciate your interest in ${interest}.
-        Your favorite flavor is ${flavor}, and your comments were: "${comments}".
-        We will contact you at ${email} or ${phone} soon!
-      `;
-      console.log("Thank-you message ready to display:", thankYouText);
+    // Create the welcome message
+    const welcomeText = `Welcome, ${name} to Cannons Coffee! You are logged in!`;
+    console.log("Welcome message ready to display:", welcomeText);
 
-      thankYouMessage.textContent = thankYouText;
-      thankYouMessage.style.display = "block";
-      contactForm.style.display = "none";
-    });
-  } else {
-    console.error("Contact form or thank-you message element not found.");
-  }
+    // Display the welcome message
+    welcomeMessage.textContent = welcomeText;
+    welcomeMessage.style.display = "block";
 
-  // Login Form Logic
-  const loginForm = document.getElementById("loginForm");
-  const welcomeMessage = document.getElementById("welcomeMessage");
+    // Hide the form
+    loginForm.style.display = "none";
+  });
+}
 
-  if (loginForm && welcomeMessage) {
-    loginForm.addEventListener("submit", function onSubmit(e) {
-      e.preventDefault();
-      const formData = new FormData(loginForm);
-      const dataObject = Object.fromEntries(formData.entries());
+// Handl contact form
+const contactForm = document.getElementById("contactForm");
+const thankYouMessage = document.getElementById("thankYouMessage");
 
-      console.log("Login data collected:", dataObject);
+if (contactForm && thankYouMessage) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-      const name = dataObject.loginName || "Guest";
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const comments = document.getElementById("comments").value;
+    const flavor = document.getElementById("flavor").value;
+    const interest = document.querySelector(
+      'input[name="interest"]:checked'
+    ).value;
 
-      const welcomeText = `Welcome, ${name} to Cannons Coffee! You are logged in!`;
-      console.log("Welcome message ready to display:", welcomeText);
+    console.log("Name captured:", name);
+    console.log("Email captured:", email);
+    console.log("Phone captured:", phone);
+    console.log("Comments captured:", comments);
+    console.log("Favorite flavor captured:", flavor);
+    console.log("Interest captured:", interest);
 
-      welcomeMessage.textContent = welcomeText;
-      welcomeMessage.style.display = "block";
-      loginForm.style.display = "none";
-    });
-  } else {
-    console.error("Login form or welcome message element not found.");
-  }
-});
+    // Create the thank-you message
+    const thankYouText = `
+      Thank you, ${name}! We appreciate your interest in ${interest}.
+      Your favorite flavor is ${flavor}, and your comments were: "${comments}".
+      We will contact you at ${email} or ${phone} soon!
+    `;
+    console.log("Thank-you message ready to display:", thankYouText);
+
+    // Display the thank-you message
+    thankYouMessage.textContent = thankYouText;
+    thankYouMessage.style.display = "block";
+
+    // Hide the form
+    contactForm.style.display = "none";
+  });
+}
